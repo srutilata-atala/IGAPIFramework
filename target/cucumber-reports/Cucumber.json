@@ -1,0 +1,126 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify getapi is working as expected",
+        "description": "",
+        "id": "validating-getapi-for-ig;verify-getapi-is-working-as-expected",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 934294100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "We are at demo site",
+            "match": {
+              "location": "StepDefinition.we_are_at_demo_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1467406100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user calls APItest with GET http request",
+            "match": {
+              "location": "StepDefinition.user_calls_apitest_with_get_http_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31067800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "location": "StepDefinition.the_api_call_got_success_with_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 576093300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                }
+              ],
+              "location": "StepDefinition.something_in_response_body_is_200(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 17165300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"message\" in response body is \"data retrieved successful\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 1
+                },
+                {
+                  "val": "data retrieved successful",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinition.something_in_response_body_is_something(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 15977000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "\"id\" in response list is \"101209986\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "id",
+                  "offset": 1
+                },
+                {
+                  "val": "101209986",
+                  "offset": 26
+                }
+              ],
+              "location": "StepDefinition.something_in_response_list_is_something(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@getapi"
+          }
+        ]
+      }
+    ],
+    "name": "Validating GetAPI for IG",
+    "description": "",
+    "id": "validating-getapi-for-ig",
+    "keyword": "Feature",
+    "uri": "GETAPI.feature"
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Verify getapi is working as expected",
+        "description": "",
+        "id": "validating-getapi-for-ig;verify-getapi-is-working-as-expected",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 990659900,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "We are at demo site",
+            "match": {
+              "location": "StepDefinition.we_are_at_demo_site()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2461484000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user calls APItest with GET http request",
+            "match": {
+              "location": "StepDefinition.user_calls_apitest_with_get_http_request()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 27779700,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "the API call got success with status code 200",
+            "match": {
+              "location": "StepDefinition.the_api_call_got_success_with_status_code()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 555909100,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "\"status\" in response body is 200",
+            "match": {
+              "arguments": [
+                {
+                  "val": "status",
+                  "offset": 1
+                }
+              ],
+              "location": "StepDefinition.something_in_response_body_is_200(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 20182200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "\"message\" in response body is \"data retrieved successful\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "message",
+                  "offset": 1
+                },
+                {
+                  "val": "data retrieved successful",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinition.something_in_response_body_is_something(String,String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 33021900,
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[ABC] Infotech\u003e but was:\u003c[IG] Infotech\u003e\r\n\tat org.junit.Assert.assertEquals(Assert.java:115)\r\n\tat org.junit.Assert.assertEquals(Assert.java:144)\r\n\tat stepdefinition.StepDefinition.AssertionPass4(StepDefinition.java:95)\r\n\tat stepdefinition.StepDefinition.something_in_response_list_is_something(StepDefinition.java:74)\r\n\tat ✽.And \"company\" in response list is \"ABC Infotech\"(GETAPI.feature:9)\r\n",
+              "status": "failed"
+            },
+            "line": 9,
+            "name": "\"company\" in response list is \"ABC Infotech\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "company",
+                  "offset": 1
+                },
+                {
+                  "val": "ABC Infotech",
+                  "offset": 31
+                }
+              ],
+              "location": "StepDefinition.something_in_response_list_is_something(String,String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "line": 2,
+            "name": "@getapi"
+          }
+        ]
+      }
+    ],
+    "name": "Validating GetAPI for IG",
+    "description": "",
+    "id": "validating-getapi-for-ig",
+    "keyword": "Feature",
+    "uri": "GETAPI.feature"
+  }
+]
